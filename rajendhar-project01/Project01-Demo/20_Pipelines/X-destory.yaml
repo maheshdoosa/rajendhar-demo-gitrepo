@@ -6,7 +6,7 @@ pool:
 
 # Stage 1 : in the below stage the It will destory the infrastracure
 stages:
-- stage: terraformValidation
+- stage: TerraformValidation
   displayName: 'ValidateTerraform' # Pipeline Stage name.
   jobs:
   - job: terraformValidate
