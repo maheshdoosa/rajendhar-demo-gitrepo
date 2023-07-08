@@ -19,7 +19,7 @@ stages:
       displayName: 'Terraform : init' # Task display name
       inputs:
         command: init # terraform command that will be execute.
-        workingDirectory: $(System.DefaultWorkingDirectory)/Project01-Demo/10_ResourceCode # Path of the code in repo.
+        workingDirectory: $(System.DefaultWorkingDirectory)/rajendhar-project01/Project01-Demo/10_ResourceCode # Path of the code in repo.
         backendServiceArm: 'rajendhar-sc' # Service connection name in Azure ADO.
         backendAzureRmResourceGroupName: rajendhar-rg # Resource Group Name where tfstatefile saved.
         backendAzureRmStorageAccountName: rajendharprojectstate # Storage account name where tfstatefile saved.
@@ -29,7 +29,7 @@ stages:
       displayName: 'Terraform : plan'
       inputs:
         command: plan
-        workingDirectory: $(System.DefaultWorkingDirectory)/Project01-Demo/10_ResourceCode
+        workingDirectory: $(System.DefaultWorkingDirectory)/rajendhar-project01/Project01-Demo/10_ResourceCode
         environmentServiceNameAzureRM: 'rajendhar-sc'
         backendAzureRmResourceGroupName: rajendhar-rg
         backendAzureRmStorageAccountName: rajendharprojectstate
@@ -39,7 +39,7 @@ stages:
       displayName: 'Terraform : validate'
       inputs:
         command: validate
-        workingDirectory: $(System.DefaultWorkingDirectory)/Project01-Demo/10_ResourceCode
+        workingDirectory: $(System.DefaultWorkingDirectory)/rajendhar-project01/Project01-Demo/10_ResourceCode
         environmentServiceNameAzureRM: 'rajendhar-sc'
         backendAzureRmResourceGroupName: rajendhar-rg
         backendAzureRmStorageAccountName: rajendharprojectstate
