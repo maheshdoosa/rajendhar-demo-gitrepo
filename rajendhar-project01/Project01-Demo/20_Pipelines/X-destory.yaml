@@ -34,12 +34,12 @@ stages:
         backendAzureRmContainerName: statefiles
         backendAzureRmKey: 'resource-group.tfstate' 
 
-- stage: terraformapply
-  displayName: 'applyTerraform'
+- stage: TerraformDestory
+  displayName: 'DestoryTerraform'
   jobs:
-  - deployment: terraformapply
+  - deployment: TerraformDestory
     timeoutInMinutes: 0
-    displayName: Provision infrastructure
+    displayName: Destory Infrastructure
     environment: "Deployment"
     strategy:
       runOnce:
